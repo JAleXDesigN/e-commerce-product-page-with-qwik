@@ -51,7 +51,7 @@ export const Slider = component$<SliderProps>(({ design, handleClose }) => {
           onMouseDown$={handleDragStart}
           onTouchStart$={handleDragStart}
           onMouseUp$={handleDragEnd}
-          onTouchEnd$$={handleDragEnd}
+          onTouchEnd$={handleDragEnd}
         >
           {images.map(({ src, title }) => (
             <img

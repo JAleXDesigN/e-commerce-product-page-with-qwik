@@ -65,14 +65,15 @@ export const useSliderProvider = (images: ImageInfo[]) => {
 
   const handleDragStart = $((event: MouseOrTouchEvent) => {
     if (event instanceof MouseEvent && event.button !== 0) return;
-    const clientX = getClientX(event);
+    const clientX = getClientX(event, "touches");
     store.dragStartX = clientX;
   });
+
   const handleDragEnd = $((event: MouseOrTouchEvent) => {
     const dragStartX = store.dragStartX;
     const container = store.sliderRef as HTMLElement;
     if (!container || !dragStartX) return;
-    const clientX = getClientX(event);
+    const clientX = getClientX(event, "changedTouches");
 
     const containerWidth = container.offsetWidth;
     const twentyPercentWidth = containerWidth * 0.1;

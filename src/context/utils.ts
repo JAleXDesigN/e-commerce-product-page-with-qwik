@@ -5,8 +5,14 @@ export type MouseOrTouchEvent =
   | QwikMouseEvent<HTMLDivElement, MouseEvent>
   | QwikTouchEvent<HTMLDivElement>;
 
-export const getClientX = (event: MouseOrTouchEvent) => {
-  return "touches" in event ? event.touches[0].clientX : event.clientX;
+export const getClientX = (
+  event: MouseOrTouchEvent,
+  type: "touches" | "changedTouches"
+) => {
+  if (type === "touches") {
+    return type in event ? event[type][0].clientX : event.clientX;
+  }
+  return type in event ? event[type][0].clientX : event.clientX;
 };
 
 export const getNextIndex = (
