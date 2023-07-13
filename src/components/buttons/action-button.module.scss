@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.action_button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  border-radius: 0.5rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  @include transition(all, 0.3s);
+}
+
+.small {
+  width: 1.8rem;
+  height: 1.8rem;
+  min-width: 1.8rem;
+
+  & > svg {
+    width: 1.6rem;
+  }
+}
+
+.large {
+  width: 2.4rem;
+  height: 2.4rem;
+  min-width: 2.4rem;
+
+  & > svg {
+    width: 2.2rem;
+  }
+}
+
+.light {
+  color: $white;
+  align-self: flex-end;
+  margin-bottom: 1.4rem;
+}
+
+.dark {
+  color: $veryDarkBlue;
+}
+
+.light,
+.dark {
+  &:hover {
+    cursor: pointer;
+    color: $orange;
+  }
+
+  &:focus-visible {
+    outline-color: $orange;
+  }
+}
+
+.only_mobile {
+  @include md {
+    display: none;
+  }
+}

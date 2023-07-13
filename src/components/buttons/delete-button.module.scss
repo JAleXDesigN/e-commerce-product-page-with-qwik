@@ -1,0 +1,33 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.delete_button {
+  border: none;
+  border-radius: 0.5rem;
+  outline: 2px solid transparent;
+  outline-offset: 3px;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  color: $grayishBlue;
+
+  @include transition(all, 0.3s);
+
+  &:hover {
+    cursor: pointer;
+    color: $lightOrange;
+  }
+
+  &:focus-visible {
+    color: $lightOrange;
+    outline-color: $lightOrange;
+  }
+
+  & > svg {
+    width: 2rem;
+  }
+}

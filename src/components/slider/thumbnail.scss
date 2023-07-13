@@ -1,0 +1,42 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.thumbnail {
+  border: none;
+  outline: none;
+  padding: 0;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  background-color: $white;
+  border: 3px solid transparent;
+  @include transition(border, 0.5s);
+  cursor: pointer;
+
+  &.modal {
+    border-color: $blackOpacity;
+  }
+
+  &.active {
+    border-color: $orange;
+    img {
+      opacity: 0.4;
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $white;
+  }
+
+  &:hover,
+  &:focus-visible {
+    img {
+      opacity: 0.6;
+    }
+  }
+  img {
+    width: 100%;
+    height: 100%;
+    @include transition(opacity, 0.5s);
+  }
+}

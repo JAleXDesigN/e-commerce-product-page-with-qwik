@@ -1,0 +1,63 @@
+@import "./variables";
+
+@mixin xs {
+  @media (min-width: $xs) {
+    @content;
+  }
+}
+@mixin sm {
+  @media (min-width: $sm) {
+    @content;
+  }
+}
+@mixin md {
+  @media (min-width: $md) {
+    @content;
+  }
+}
+@mixin lg {
+  @media (min-width: $lg) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: $xl) {
+    @content;
+  }
+}
+@mixin xxl {
+  @media (min-width: $xxl) {
+    @content;
+  }
+}
+@mixin transition($property, $time) {
+  transition: $property $time cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@mixin button-menu {
+  border: none;
+  background-color: transparent;
+  width: 2rem;
+  height: 2rem;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $darkGrayishBlue;
+  cursor: pointer;
+
+  @include transition(color, 0.2s);
+
+  &:hover,
+  &:active {
+    color: $orange;
+  }
+
+  & > svg {
+    width: 2rem;
+  }
+
+  @include md {
+    display: none;
+  }
+}

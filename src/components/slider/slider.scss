@@ -1,0 +1,66 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-main-images {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  user-select: none;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @include lg {
+    border-radius: 1.5rem;
+  }
+}
+
+.main-images-group {
+  width: inherit;
+  display: grid;
+  grid-template-columns: repeat(4, 100%);
+  background-color: $grayishBlue;
+  @include transition(margin, 0.5s);
+
+  img {
+    width: inherit;
+    height: auto;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  &.slide-0 {
+    margin-left: 0;
+  }
+  &.slide-1 {
+    margin-left: -100%;
+  }
+  &.slide-2 {
+    margin-left: -200%;
+  }
+  &.slide-3 {
+    margin-left: -300%;
+  }
+}
+
+.thumbnails-group {
+  display: none;
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2.9rem;
+    margin-top: 3rem;
+  }
+
+  &.modal {
+    width: 85%;
+    margin: 3rem auto 0;
+  }
+}

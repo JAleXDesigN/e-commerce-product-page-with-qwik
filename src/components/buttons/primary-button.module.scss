@@ -1,0 +1,36 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.primary_button {
+  border: none;
+  min-height: 5.6rem;
+  height: auto;
+  padding: 1rem 1.5rem;
+  background-color: $orange;
+  color: $white;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  border-radius: 1rem;
+  cursor: pointer;
+  @include transition(all, 0.3s);
+
+  &.with_icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.6rem;
+  }
+
+  &.with_shadow {
+    box-shadow: rgba(255, 172, 106, 0.8) 0 8px 40px -7px;
+  }
+
+  & > svg {
+    width: 1.7rem;
+  }
+
+  &:hover {
+    background-color: $lightOrange;
+  }
+}

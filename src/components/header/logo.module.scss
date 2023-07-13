@@ -1,0 +1,18 @@
+@import "../../styles/variables";
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: $black;
+  transition: color 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
+
+  &:hover,
+  &:focus-visible {
+    color: $orange;
+  }
+
+  & > svg {
+    width: 13.7rem;
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/web-manifest-combined.json",
+  "name": "E-commerce Product Page Challenge FrontEnd Mentor",
+  "short_name": "E-commerce Product Page",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#fff",
+  "description": "Challenge E-commerce Product Page of FrontEnd Mentor, made with Qwik Framework by Jonathan Holguin."
+}

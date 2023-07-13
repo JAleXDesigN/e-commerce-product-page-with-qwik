@@ -1,0 +1,70 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.slider-control {
+  border: none;
+  min-width: 4.6rem;
+  width: 4.6rem;
+  height: 4.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $white;
+  border-radius: 50%;
+  position: absolute;
+  color: $veryDarkBlue;
+  z-index: 1;
+  outline: 2px solid transparent;
+  @include transition(all, 0.2s);
+
+  & > svg {
+    width: 1.2rem;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: $orange;
+  }
+
+  &:focus-visible {
+    outline-color: $white;
+    background-color: $orange;
+    color: $white;
+  }
+
+  @include sm {
+    min-width: 5.6rem;
+    width: 5.6rem;
+    height: 5.6rem;
+  }
+
+  &.mobile {
+    top: 50%;
+    transform: translateY(-50%);
+    &[data-position="left"] {
+      left: 2rem;
+      right: auto;
+    }
+    &[data-position="right"] {
+      left: auto;
+      right: 2rem;
+    }
+
+    @include lg {
+      display: none;
+    }
+  }
+
+  &.modal {
+    top: 39.5%;
+
+    &[data-position="left"] {
+      left: -2.8rem;
+      right: auto;
+    }
+    &[data-position="right"] {
+      left: auto;
+      right: -2.8rem;
+    }
+  }
+}

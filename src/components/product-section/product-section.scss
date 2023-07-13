@@ -1,0 +1,23 @@
+@import "../../styles/mixins";
+
+.main {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  @include md {
+    max-width: 111rem;
+    width: 90%;
+    padding: 4.8rem 0;
+  }
+
+  @include lg {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 12.8rem;
+
+    padding: 4.8rem;
+  }
+}

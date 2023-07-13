@@ -1,0 +1,43 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.badge {
+  border: none;
+  background-color: transparent;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.6rem;
+  width: 3.6rem;
+  border-radius: 0.6rem;
+  outline: 2px solid transparent;
+  color: $darkGrayishBlue;
+  @include transition(all, 0.2s);
+
+  &:hover {
+    cursor: pointer;
+    color: $veryDarkBlue;
+  }
+
+  &:focus-visible {
+    color: $orange;
+    outline-color: $orange;
+  }
+
+  & > svg {
+    width: 2.2rem;
+  }
+}
+
+.number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: $orange;
+  color: $white;
+  padding: 0.1rem 0.6rem;
+  font-weight: 700;
+  font-size: 1.1rem;
+  border-radius: 0.5rem;
+}
