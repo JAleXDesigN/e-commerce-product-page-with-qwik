@@ -9,7 +9,7 @@ type AvatarProps = Pick<
 >;
 
 export const avatarSrc =
-  "https://res.cloudinary.com/dekp1iyjf/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1673909165/ecommerce-fementor/image-avatar_kkrq90.webp";
+  "https://res.cloudinary.com/dekp1iyjf/image/upload/w_50,h_50/v1673909165/ecommerce-fementor/image-avatar_kkrq90.webp";
 
 export const Avatar = component$<AvatarProps>(
   ({ src = avatarSrc, alt = "User Image", width = 40, height = 40 }) => {
