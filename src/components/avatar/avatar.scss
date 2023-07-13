@@ -11,6 +11,8 @@
   border-radius: 50%;
   box-shadow: 0 0 0 0 transparent;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
   outline: 2px solid transparent;
 
   cursor: pointer;

@@ -18,6 +18,7 @@ export const Badge = component$<BadgeProps>(
       <button
         type={type}
         class="badge"
+        aria-label="Toggle Cart"
         {...rest}
       >
         <svg

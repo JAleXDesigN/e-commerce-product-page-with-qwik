@@ -10,6 +10,7 @@ export const QuantityButton = component$<QuantityButtonProps>(
       <button
         type="button"
         class={styles.quantity_button}
+        aria-label={`${action} product quantity`}
         {...rest}
       >
         {action === "increase" ? <IconPlus /> : <IconMinus />}

@@ -12,6 +12,8 @@
   overflow: hidden;
   position: relative;
   user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
 
   &:hover {
     cursor: pointer;
@@ -33,6 +35,8 @@
     width: inherit;
     height: auto;
     user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     -webkit-user-drag: none;
   }
   &.slide-0 {

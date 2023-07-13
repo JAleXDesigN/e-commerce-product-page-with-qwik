@@ -15,6 +15,7 @@ export const Control = component$<ControlProps>(({ type, design, ...rest }) => {
       type="button"
       data-position={type === "prev" ? "left" : "right"}
       class={["slider-control", design]}
+      aria-label={`Go to ${type === "prev" ? "previous" : "next"} image`}
       {...rest}
     >
       <svg
