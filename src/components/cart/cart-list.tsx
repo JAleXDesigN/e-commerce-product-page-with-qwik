@@ -2,9 +2,10 @@ import type { QwikIntrinsicElements } from "@builder.io/qwik";
 import { component$, useStylesScoped$ } from "@builder.io/qwik";
 import styles from "./cart-list.scss?inline";
 import { currencyFormatter } from "~/helpers/format-price";
-import { useCartContext, type ItemInfo } from "~/context/cart-context";
+import { useCartContext } from "~/context/cart-context";
 import { PrimaryButton } from "../buttons/primary-button";
 import { DeleteButton } from "../buttons/delete-button";
+import type { ItemInfo } from "~/context/types";
 
 type DivElementProps = QwikIntrinsicElements["div"];
 
